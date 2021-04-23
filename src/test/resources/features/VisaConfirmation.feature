@@ -1,6 +1,8 @@
 @UI
 Feature: Visa checks
 
+  # Pre-condition for multiple features -  adpots reusablilty
+  # executes Before each Scenario in ths feature file
   Background:
     Given I am on the Check UK visa website
     And I start visa check
