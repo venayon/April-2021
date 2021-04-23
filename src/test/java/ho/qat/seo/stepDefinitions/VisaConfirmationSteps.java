@@ -8,6 +8,9 @@ import io.cucumber.java.en.When;
 
 
 public class VisaConfirmationSteps {
+    static {
+        System.setProperty("webdriver.chrome.driver", "/Users/vsr/IdeaProjects/hotelbooking/driverFiles/chromedriver");
+    }
 
     ResultPage resultPage;
     StartPage startPage;

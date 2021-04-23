@@ -8,7 +8,7 @@ import net.serenitybdd.core.annotations.findby.FindBy;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 
-@DefaultUrl("https://www.gov.uk.uk/check-uk-visa") // TODO FIXED VENU
+@DefaultUrl("https://www.gov.uk/check-uk-visa") // TODO FIXED VENU
 public class StartPage extends PageObject {
 
 
@@ -16,7 +16,7 @@ public class StartPage extends PageObject {
         super(new ChromeDriver());
     }
 
-    @FindBy(css = "#get-started > a")
+    @FindBy(xpath = "//a[normalize-space()='Start now']]")
         private WebElementFacade startNowButton;
 
         public void clickStartNow(){
