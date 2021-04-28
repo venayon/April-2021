@@ -14,11 +14,17 @@ public class ReasonForTravelPage extends PageObject {
     @FindBy(css = "#current-question > button")
     private WebElementFacade nextStepButton;
 
-
-    public void selectReasonForVisit(String reason){
-        String selector = String.join("","div[value='", reason.toLowerCase(), "']");
+    public void selectReasonForVisit1(String reason){
+        String selector = String.join("","div[@value='", reason.toLowerCase(), "']");
         reasonToSelect = find(By.cssSelector(selector));
         clickOn(reasonToSelect);
+    }
+    public void selectReasonForVisit(String reason){
+        String selector = String.join("","input[@id='response-0']");
+        reasonToSelect = find(By.xpath("//*[@id='response-0']"));
+       // reasonToSelect.select().byVisibleText(reason);
+        clickOn(reasonToSelect);
+        System.out.println(reasonToSelect);
     }
 
     public void clickNextStepButton(){
